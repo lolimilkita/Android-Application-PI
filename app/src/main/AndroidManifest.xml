@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApplicationDiagnosis">
-        <activity android:name=".EightSecQuestion"></activity>
+        <activity android:name=".EightSecQuestion"/>
         <activity android:name=".SevenSecQuestion" />
         <activity android:name=".SixSecQuestion" />
         <activity android:name=".FiveSecQuestion" />

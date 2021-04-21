@@ -1,15 +1,13 @@
 package com.test.applicationdiagnosis
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.view.isInvisible
-import java.text.DecimalFormat
+import androidx.appcompat.app.AppCompatActivity
+
 
 class ResultDiagnotic : AppCompatActivity(), View.OnClickListener {
 
@@ -426,14 +424,11 @@ class ResultDiagnotic : AppCompatActivity(), View.OnClickListener {
         when (v?.id){
             R.id.btn_back_home -> {
                 val moveIntent = Intent(this@ResultDiagnotic, MainActivity::class.java)
+                moveIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(moveIntent)
                 finish()
             }
         }
     }
 
-    override fun onBackPressed() {
-        // doing nothing on pressing back key
-        return
-    }
 }
