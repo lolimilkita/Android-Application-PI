@@ -1,117 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/img_people"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/people_with_doctor" />
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/view1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="210dp"
+            android:background="@drawable/ic_people_with_doctor"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/img_people1"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
-                android:background="@drawable/people_with_doctor"
-                android:visibility="invisible" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1">
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/img_people1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:padding="16dp"
-                app:cardCornerRadius="30dp">
+                android:background="@color/cornflower"
+                android:paddingBottom="16dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="7dp">
+                <ImageView
+                    android:id="@+id/img_people2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/backgrounds/scenic" />
 
-                    <ImageView
-                        android:id="@+id/img_people2"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="12dp" />
+                <TextView
+                    android:id="@+id/tv_total_question"
+                    style="@style/TextQuestionContent"
+                    android:text="@string/total_pertanyaan"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_people2"
+                    app:layout_constraintStart_toStartOf="@+id/img_people2"
+                    app:layout_constraintTop_toBottomOf="@id/img_people2" />
 
-                    <TextView
-                        android:id="@+id/tv_total_question"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/img_people2"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        android:text="@string/total_pertanyaan"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tv_question_selected"
+                    style="@style/TextQuestionContent"
+                    android:text="@string/result"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_total_question"
+                    app:layout_constraintStart_toStartOf="@+id/tv_total_question"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_question"/>
 
-                    <TextView
-                        android:id="@+id/tv_question1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_total_question"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        android:text="@string/result"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tv_result_diagnotic"
+                    style="@style/TextQuestionContent"
+                    android:text="@string/result"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_question_selected"
+                    app:layout_constraintStart_toStartOf="@+id/tv_question_selected"
+                    app:layout_constraintTop_toBottomOf="@id/tv_question_selected"/>
 
-                    <TextView
-                        android:id="@+id/tv_result_diagnotic"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_question1"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:text="@string/result"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                <Button
+                    android:id="@+id/btn_back_home"
+                    style="@style/ButtonNext"
+                    android:layout_below="@+id/tv_result_diagnotic"
+                    android:text="@string/back"
+                    app:cornerRadius="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_result_diagnotic"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_diagnotic"
+                    app:layout_constraintTop_toBottomOf="@id/tv_result_diagnotic" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginTop="16dp"
-                        android:id="@+id/test"
-                        android:text="@string/test"
-                        android:layout_below="@id/btn_back_home"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <Button
-                        android:id="@+id/btn_back_home"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_result_diagnotic"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="40dp"
-                        android:gravity="center"
-                        android:text="@string/back" />
+        </androidx.cardview.widget.CardView>
 
-                </RelativeLayout>
+        <ImageView
+            android:id="@+id/img_people"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_people_with_doctor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </RelativeLayout>
-
-    </ScrollView>
-
-</RelativeLayout>
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.test.applicationdiagnosis
+package com.test.applicationdiagnosis.activity.questions
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.Toast
+import com.test.applicationdiagnosis.R
 
 class FiveSecQuestion : AppCompatActivity(), View.OnClickListener {
-    private var question9_yes_checked = false
+    private var q9YesChecked = false
     private var setResult: String = "blank"
     private var totalTrue: Int = 0
     private var setTotalQuestion: String = ""
@@ -22,6 +23,7 @@ class FiveSecQuestion : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_five_sec_question)
+        supportActionBar?.title = getString(R.string.acbar_question)
 
         totalTrue = intent.getIntExtra(ThirdSecQuestion.EXTRA_TOTAL, 0)
         setTotalQuestion = intent.getStringExtra(ThirdSecQuestion.EXTRA_TOTAL_QUESTION).toString()
@@ -37,11 +39,11 @@ class FiveSecQuestion : AppCompatActivity(), View.OnClickListener {
             when (view.id) {
                 R.id.btn_yes_question9 ->
                     if (checked) {
-                        question9_yes_checked = true
+                        q9YesChecked = true
                     }
                 R.id.btn_no_question9 ->
                     if (checked){
-                        question9_yes_checked = false
+                        q9YesChecked = false
                     }
             }
             setResult = "notBlank"
@@ -55,7 +57,7 @@ class FiveSecQuestion : AppCompatActivity(), View.OnClickListener {
                     "blank" ->
                         Toast.makeText(this, "Anda harus memilih Ya/Tidak", Toast.LENGTH_SHORT).show()
                     "notBlank" ->
-                        if (question9_yes_checked) {
+                        if (q9YesChecked) {
                             setTotalQuestion += "9"
                             totalTrue = totalTrue + 1
                             val moveWithDataIntent = Intent(this@FiveSecQuestion, SixSecQuestion::class.java)
@@ -63,7 +65,7 @@ class FiveSecQuestion : AppCompatActivity(), View.OnClickListener {
                             moveWithDataIntent.putExtra(SixSecQuestion.EXTRA_TOTAL_QUESTION, setTotalQuestion)
                             startActivity(moveWithDataIntent)
                             finish()
-                        } else if (!question9_yes_checked) {
+                        } else if (!q9YesChecked) {
                             val moveWithDataIntent = Intent(this@FiveSecQuestion, SevenSecQuestion::class.java)
                             moveWithDataIntent.putExtra(SevenSecQuestion.EXTRA_TOTAL, totalTrue)
                             moveWithDataIntent.putExtra(SevenSecQuestion.EXTRA_TOTAL_QUESTION, setTotalQuestion)

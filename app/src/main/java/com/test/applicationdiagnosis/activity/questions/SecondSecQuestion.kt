@@ -1,4 +1,4 @@
-package com.test.applicationdiagnosis
+package com.test.applicationdiagnosis.activity.questions
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
-import com.test.applicationdiagnosis.SecondSecQuestion.Companion.EXTRA_TOTAL
+import com.test.applicationdiagnosis.R
 
 class SecondSecQuestion : AppCompatActivity(), View.OnClickListener {
     private var q4YesCheck = false
@@ -25,12 +25,10 @@ class SecondSecQuestion : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_sec_question)
+        supportActionBar?.title = getString(R.string.acbar_question)
 
         totalTrue = intent.getIntExtra(EXTRA_TOTAL, 0)
         setTotalQuestion = intent.getStringExtra(EXTRA_TOTAL_QUESTION).toString()
-
-        val tvTest: TextView = findViewById(R.id.test)
-        tvTest.text = setTotalQuestion
 
         val btnNextSec1: Button = findViewById(R.id.btn_next_sec2)
         btnNextSec1.setOnClickListener(this)
@@ -86,15 +84,19 @@ class SecondSecQuestion : AppCompatActivity(), View.OnClickListener {
                             startActivity(moveWithDataIntent)
                             finish()
                         } else if (q4YesCheck && !q5YesCheck){
-                            setResult = "false_diagnotic2"
-                            val moveWithDataIntent = Intent(this@SecondSecQuestion, ResultDiagnotic::class.java)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_RESULT, setResult)
+                            setResult = "false_diagnosis2"
+                            setTotalQuestion = "4"
+                            val moveWithDataIntent = Intent(this@SecondSecQuestion, ResultDiagnosis::class.java)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
                             startActivity(moveWithDataIntent)
                             finish()
                         } else if (!q4YesCheck && !q5YesCheck) {
-                            setResult = "false_diagnotic"
-                            val moveWithDataIntent = Intent(this@SecondSecQuestion, ResultDiagnotic::class.java)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_RESULT, setResult)
+                            setResult = "false_diagnosis"
+                            setTotalQuestion = "123"
+                            val moveWithDataIntent = Intent(this@SecondSecQuestion, ResultDiagnosis::class.java)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
                             startActivity(moveWithDataIntent)
                             finish()
                         }

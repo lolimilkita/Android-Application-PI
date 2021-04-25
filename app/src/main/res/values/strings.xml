@@ -1,12 +1,21 @@
 <resources>
     <string name="app_name">ApplicationDiagnosis</string>
+    <string name="acbar_main">Aplikasi Diagnosa Penyakit</string>
+    <string name="acbar_question">Pilih Gejala</string>
+    <string name="acbar_result">Hasil Diagnosis</string>
     <string name="mulai_deteksi">Mulai Diagnosa</string>
-    <string name="informasi_penyakit">Informasi Penyakit</string>
+    <string name="informasi_tbc">Informasi TBC</string>
+    <string name="informasi_bronchitis">Informasi Bronkitis</string>
+    <string name="informasi_ppok">Informasi PPOK</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="pilih_gejala">Pilih Gejala</string>
     <string name="ya">Ya</string>
     <string name="tidak">Tidak</string>
     <string name="next">Lanjut</string>
+    <string name="result">Result</string>
+    <string name="back">Home</string>
+    <string name="test">test</string>
+    <string name="total_pertanyaan">Gejala yang Anda pilih adalah sebagai berikut: </string>
 
     <string name="pertanyaan1">Apakah Anda merasakan gejala Demam?</string>
     <string name="pertanyaan2">Apakah Anda merasakan gejala Lemas, Letih, Lesu?</string>
@@ -23,9 +32,27 @@
     <string name="pertanyaan13">Apakah Anda merasakan gejala Pembengkakan di tungkai dan kaki?</string>
     <string name="pertanyaan14">Apakah Anda merasakan gejala Mengi?</string>
     <string name="pertanyaan15">Apakah Anda merasakan gejala Nafas tersengal sampai tidak bisa berbicara?</string>
-    <string name="result">Result</string>
-    <string name="back">Home</string>
-    <string name="test">test</string>
-    <string name="total_pertanyaan">Gejala yang Anda pilih adalah sebagai berikut </string>
 
+    <string name="symptoms1">Anda merasakan gejala Demam</string>
+    <string name="symptoms2">Anda merasakan gejala Lemas, Letih, Lesu</string>
+    <string name="symptoms3">Anda merasakan gejala Batuk yang berlangsung lebih dari 14 hari</string>
+    <string name="symptoms4">Anda merasakan gejala Batuk tidak kunjung sembuh yang dapat disertai dahak</string>
+    <string name="symptoms5">Anda merasakan gejala Nyeri dada ketika batuk</string>
+    <string name="symptoms6">Anda merasakan gejala Keringat dingin waktu malam hari</string>
+    <string name="symptoms7">Anda merasakan gejala Tidak Nafsu Makan</string>
+    <string name="symptoms8">Anda merasakan gejala Berat badan menurun</string>
+    <string name="symptoms9">Anda merasakan gejala Mual dan muntah</string>
+    <string name="symptoms10">Anda merasakan gejala Diare</string>
+    <string name="symptoms11">Anda merasakan gejala Linglung, atau terjadi penurunan kesadaran</string>
+    <string name="symptoms12">Anda merasakan gejala Susah bernafas ketika melakukan aktivitas fisik</string>
+    <string name="symptoms13">Anda merasakan gejala Pembengkakan di tungkai dan kaki</string>
+    <string name="symptoms14">Anda merasakan gejala Mengi</string>
+    <string name="symptoms15">Anda merasakan gejala Nafas tersengal sampai tidak bisa berbicara</string>
+
+    <string name="result_false_diagnosis">Anda tidak memiliki penyakit TBC, Bronchitis, PPOK. Tetap jaga kesehatan YA :)</string>
+    <string name="result_false_diagnosis_two">Anda tidak memiliki penyakit TBC, Bronchitis, PPOK. Namun jika batuk anda tidak kunjung sembuh, kami menyarankan untuk periksa kedokter. Tetap semangat menghadapi penyakit YA!</string>
+    <string name="ic_bad_environment">Ikon Lingkungan Buruk</string>
+    
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="judul_aplikasi"><![CDATA[APLIKASI PENDETEKSI TBC, BRONKITIS & PPOK]]></string>
 </resources>

@@ -9,15 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApplicationDiagnosis">
-        <activity android:name=".EightSecQuestion"/>
-        <activity android:name=".SevenSecQuestion" />
-        <activity android:name=".SixSecQuestion" />
-        <activity android:name=".FiveSecQuestion" />
-        <activity android:name=".FourSecQuestion" />
-        <activity android:name=".ThirdSecQuestion" />
-        <activity android:name=".ResultDiagnotic" />
-        <activity android:name=".SecondSecQuestion" />
-        <activity android:name=".FirstSecQuestion" />
+        <activity android:name=".activity.SplashActivity"></activity>
+        <activity android:name=".activity.PpokInfoActivity" />
+        <activity android:name=".activity.BronchitisInfoActivity" />
+        <activity android:name=".activity.TbcInfoActivity" />
+        <activity android:name=".activity.questions.EightSecQuestion" />
+        <activity android:name=".activity.questions.SevenSecQuestion" />
+        <activity android:name=".activity.questions.SixSecQuestion" />
+        <activity android:name=".activity.questions.FiveSecQuestion" />
+        <activity android:name=".activity.questions.FourSecQuestion" />
+        <activity android:name=".activity.questions.ThirdSecQuestion" />
+        <activity android:name=".activity.questions.ResultDiagnosis" />
+        <activity android:name=".activity.questions.SecondSecQuestion" />
+        <activity android:name=".activity.questions.FirstSecQuestion" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +29,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.test.applicationdiagnosis
+package com.test.applicationdiagnosis.activity.questions
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,11 @@ import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.test.applicationdiagnosis.R
 
 class FourSecQuestion : AppCompatActivity(), View.OnClickListener {
-    private var question7_yes_checked = false
-    private var question8_yes_checked = false
+    private var q7YesChecked = false
+    private var q8YesChecked = false
     private var setResult: String = "blank"
     private var totalTrue: Int = 0
     private var setTotalQuestion: String = ""
@@ -24,12 +25,10 @@ class FourSecQuestion : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_four_sec_question)
+        supportActionBar?.title = getString(R.string.acbar_question)
 
         totalTrue = intent.getIntExtra(EXTRA_TOTAL, 0)
         setTotalQuestion = intent.getStringExtra(ThirdSecQuestion.EXTRA_TOTAL_QUESTION).toString()
-
-        val tvTest: TextView = findViewById(R.id.test)
-        tvTest.text = setTotalQuestion
 
         val btnNextSec: Button = findViewById(R.id.btn_next_sec4)
         btnNextSec.setOnClickListener(this)
@@ -42,19 +41,19 @@ class FourSecQuestion : AppCompatActivity(), View.OnClickListener {
             when (view.id) {
                 R.id.btn_yes_question7 ->
                     if (checked) {
-                        question7_yes_checked = true
+                        q7YesChecked = true
                     }
                 R.id.btn_no_question7 ->
                     if (checked) {
-                        question7_yes_checked = false
+                        q7YesChecked = false
                     }
                 R.id.btn_yes_question8 ->
                     if (checked) {
-                        question8_yes_checked = true
+                        q8YesChecked = true
                     }
                 R.id.btn_no_question8 ->
                     if (checked) {
-                        question8_yes_checked = false
+                        q8YesChecked = false
                     }
             }
             setResult = "notBlank"
@@ -68,42 +67,42 @@ class FourSecQuestion : AppCompatActivity(), View.OnClickListener {
                     "blank" ->
                         Toast.makeText(this, "Anda harus memilih Ya/Tidak", Toast.LENGTH_SHORT).show()
                     "notBlank" ->
-                        if (question7_yes_checked && question8_yes_checked) {
+                        if (q7YesChecked && q8YesChecked) {
                             setResult = "pass_check4"
                             setTotalQuestion += "78"
                             totalTrue += 2
-                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnotic::class.java)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL, totalTrue)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL_QUESTION, setTotalQuestion)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_RESULT, setResult)
+                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnosis::class.java)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL, totalTrue)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
                             startActivity(moveWithDataIntent)
                             finish()
-                        } else if (!question7_yes_checked && question8_yes_checked) {
+                        } else if (!q7YesChecked && q8YesChecked) {
                             setResult = "pass_check4"
                             setTotalQuestion += "8"
                             totalTrue += 1
-                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnotic::class.java)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL, totalTrue)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL_QUESTION, setTotalQuestion)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_RESULT, setResult)
+                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnosis::class.java)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL, totalTrue)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
                             startActivity(moveWithDataIntent)
                             finish()
-                        } else if (question7_yes_checked && !question8_yes_checked) {
+                        } else if (q7YesChecked && !q8YesChecked) {
                             setResult = "pass_check4"
                             setTotalQuestion += "7"
                             totalTrue += 1
-                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnotic::class.java)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL, totalTrue)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL_QUESTION, setTotalQuestion)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_RESULT, setResult)
+                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnosis::class.java)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL, totalTrue)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
                             startActivity(moveWithDataIntent)
                             finish()
-                        } else if (!question7_yes_checked && !question8_yes_checked){
+                        } else if (!q7YesChecked && !q8YesChecked){
                             setResult = "pass_check4"
-                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnotic::class.java)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL, totalTrue)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_TOTAL_QUESTION, setTotalQuestion)
-                            moveWithDataIntent.putExtra(ResultDiagnotic.EXTRA_RESULT, setResult)
+                            val moveWithDataIntent = Intent(this@FourSecQuestion, ResultDiagnosis::class.java)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL, totalTrue)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
                             startActivity(moveWithDataIntent)
                             finish()
                         }

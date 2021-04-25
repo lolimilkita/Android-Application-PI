@@ -1,52 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="204dp"
-        android:layout_height="204dp"
-        android:background="@drawable/logo_universitas_gunadarma"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_start_detection"
-        android:layout_width="277dp"
-        android:layout_height="56dp"
-        android:text="@string/mulai_deteksi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.119" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="370dp"
+            android:layout_height="215dp"
+            android:background="@drawable/ic_bad_society"
+            android:contentDescription="@string/ic_bad_environment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_information"
-        android:layout_width="277dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/informasi_penyakit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_start_detection" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cornflower"
+            android:paddingEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-    <Button
-        android:id="@+id/btn_about"
-        android:layout_width="277dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/tentang_aplikasi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_information" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSlide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:padding="16dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_recycler">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cornflower"
+                android:paddingBottom="32dp">
+
+                <Button
+                    style="@style/ButtonMainMenu"
+                    app:cornerRadius="18dp"
+                    android:id="@+id/btn_start_detection"
+                    android:text="@string/mulai_deteksi"
+                    app:icon="@drawable/ic_baseline_manage_search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    style="@style/ButtonMainMenu"
+                    app:cornerRadius="18dp"
+                    android:id="@+id/btn_information_tbc"
+                    android:text="@string/informasi_tbc"
+                    app:icon="@drawable/ic_baseline_article"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_start_detection"
+                    app:layout_constraintStart_toStartOf="@+id/btn_start_detection"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_start_detection" />
+
+                <Button
+                    style="@style/ButtonMainMenu"
+                    app:cornerRadius="18dp"
+                    android:id="@+id/btn_information_bronchitis"
+                    android:text="@string/informasi_bronchitis"
+                    app:icon="@drawable/ic_baseline_article"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_information_tbc"
+                    app:layout_constraintStart_toStartOf="@+id/btn_information_tbc"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_information_tbc" />
+
+                <Button
+                    android:id="@+id/btn_information_ppok"
+                    style="@style/ButtonMainMenu"
+                    android:text="@string/informasi_ppok"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_baseline_article"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_information_bronchitis"
+                    app:layout_constraintStart_toStartOf="@+id/btn_information_bronchitis"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_information_bronchitis" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
