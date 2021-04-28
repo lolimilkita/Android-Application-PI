@@ -1,4 +1,4 @@
-package com.test.applicationdiagnosis
+package com.test.applicationdiagnosis.data
 
 data class Slide (
     var name: String = "",

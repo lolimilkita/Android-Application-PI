@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.SplashActivity">
+    tools:context=".activity.SplashActivity"
+    android:background="@color/makara">
 
     <ImageView
         android:id="@+id/lung_icon"
@@ -23,10 +24,13 @@
         android:id="@+id/TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
         android:text="@string/judul_aplikasi"
         android:textSize="18sp"
-        android:gravity="center"
         app:layout_constraintEnd_toEndOf="@+id/lung_icon"
         app:layout_constraintStart_toStartOf="@+id/lung_icon"
         app:layout_constraintTop_toBottomOf="@+id/lung_icon" />

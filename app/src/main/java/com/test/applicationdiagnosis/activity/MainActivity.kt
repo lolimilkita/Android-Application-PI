@@ -1,4 +1,4 @@
-package com.test.applicationdiagnosis
+package com.test.applicationdiagnosis.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,9 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
+import com.test.applicationdiagnosis.R
+import com.test.applicationdiagnosis.`object`.SlideData
 import com.test.applicationdiagnosis.activity.*
+import com.test.applicationdiagnosis.activity.info.BronchitisInfoActivity
+import com.test.applicationdiagnosis.activity.info.PpokInfoActivity
+import com.test.applicationdiagnosis.activity.info.TbcInfoActivity
 import com.test.applicationdiagnosis.activity.questions.FirstSecQuestion
-import com.test.applicationdiagnosis.adapter.AdapterView
+import com.test.applicationdiagnosis.adapter.AdapterSlideView
+import com.test.applicationdiagnosis.data.Slide
 import com.test.applicationdiagnosis.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         list.addAll(SlideData.listData)
 
         bindingActivityMainBinding.recyclerViewSlide.layoutManager = LinearLayoutManager(this, OrientationHelper.HORIZONTAL, false)
-        bindingActivityMainBinding.recyclerViewSlide.adapter = AdapterView(list)
+        bindingActivityMainBinding.recyclerViewSlide.adapter = AdapterSlideView(list)
 
         bindingActivityMainBinding.btnStartDetection.setOnClickListener {
             val moveIntent = Intent(this@MainActivity, FirstSecQuestion::class.java)

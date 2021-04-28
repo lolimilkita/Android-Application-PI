@@ -5,21 +5,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.test.applicationdiagnosis.MainActivity
+import com.test.applicationdiagnosis.activity.MainActivity
 import com.test.applicationdiagnosis.R
-import com.test.applicationdiagnosis.Slide
-import com.test.applicationdiagnosis.SlideData
-import com.test.applicationdiagnosis.activity.BronchitisInfoActivity
-import com.test.applicationdiagnosis.activity.PpokInfoActivity
-import com.test.applicationdiagnosis.activity.TbcInfoActivity
+import com.test.applicationdiagnosis.data.Slide
+import com.test.applicationdiagnosis.activity.info.BronchitisInfoActivity
+import com.test.applicationdiagnosis.activity.info.PpokInfoActivity
+import com.test.applicationdiagnosis.activity.info.TbcInfoActivity
 import com.test.applicationdiagnosis.activity.questions.FirstSecQuestion
 import com.test.applicationdiagnosis.databinding.RowItemBinding
 
-class AdapterView(private val listSlide: ArrayList<Slide>): RecyclerView.Adapter<AdapterView.ViewHolder>() {
+class AdapterSlideView(private val listSlide: ArrayList<Slide>): RecyclerView.Adapter<AdapterSlideView.ViewHolder>() {
     companion object{
         private val TAG = MainActivity::class.java.simpleName
     }

@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.test.applicationdiagnosis.R
-import com.test.applicationdiagnosis.MainActivity
+import com.test.applicationdiagnosis.activity.MainActivity
 
 class ResultDiagnosis : AppCompatActivity(), View.OnClickListener {
 

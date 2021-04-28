@@ -7,8 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="16dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/view1"
@@ -24,6 +23,8 @@
             android:layout_width="310dp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="30dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view1">
@@ -61,7 +62,7 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="@+id/tv_total_question"
                     app:layout_constraintStart_toStartOf="@+id/tv_total_question"
-                    app:layout_constraintTop_toBottomOf="@id/tv_total_question"/>
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_question" />
 
                 <TextView
                     android:id="@+id/tv_result_diagnotic"
@@ -70,13 +71,13 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="@+id/tv_question_selected"
                     app:layout_constraintStart_toStartOf="@+id/tv_question_selected"
-                    app:layout_constraintTop_toBottomOf="@id/tv_question_selected"/>
+                    app:layout_constraintTop_toBottomOf="@id/tv_question_selected" />
 
                 <Button
                     android:id="@+id/btn_back_home"
                     style="@style/ButtonNext"
                     android:layout_below="@+id/tv_result_diagnotic"
-                    android:text="@string/back"
+                    android:text="@string/back_home"
                     app:cornerRadius="18dp"
                     app:layout_constraintEnd_toEndOf="@+id/tv_result_diagnotic"
                     app:layout_constraintStart_toStartOf="@+id/tv_result_diagnotic"

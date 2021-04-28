@@ -13,7 +13,7 @@
     <string name="tidak">Tidak</string>
     <string name="next">Lanjut</string>
     <string name="result">Result</string>
-    <string name="back">Home</string>
+    <string name="back_home">Home</string>
     <string name="test">test</string>
     <string name="total_pertanyaan">Gejala yang Anda pilih adalah sebagai berikut: </string>
 
@@ -52,7 +52,10 @@
     <string name="result_false_diagnosis">Anda tidak memiliki penyakit TBC, Bronchitis, PPOK. Tetap jaga kesehatan YA :)</string>
     <string name="result_false_diagnosis_two">Anda tidak memiliki penyakit TBC, Bronchitis, PPOK. Namun jika batuk anda tidak kunjung sembuh, kami menyarankan untuk periksa kedokter. Tetap semangat menghadapi penyakit YA!</string>
     <string name="ic_bad_environment">Ikon Lingkungan Buruk</string>
-    
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="judul_aplikasi"><![CDATA[APLIKASI PENDETEKSI TBC, BRONKITIS & PPOK]]></string>
+
+    <string name="dummy_info">Dummy Info</string>
+
 </resources>

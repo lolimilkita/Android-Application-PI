@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cornflower"
-            android:paddingEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -34,13 +34,19 @@
                 android:id="@+id/recyclerViewSlide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -61,30 +67,30 @@
                 android:paddingBottom="32dp">
 
                 <Button
-                    style="@style/ButtonMainMenu"
-                    app:cornerRadius="18dp"
                     android:id="@+id/btn_start_detection"
+                    style="@style/ButtonMainMenu"
                     android:text="@string/mulai_deteksi"
+                    app:cornerRadius="18dp"
                     app:icon="@drawable/ic_baseline_manage_search"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    style="@style/ButtonMainMenu"
-                    app:cornerRadius="18dp"
                     android:id="@+id/btn_information_tbc"
+                    style="@style/ButtonMainMenu"
                     android:text="@string/informasi_tbc"
+                    app:cornerRadius="18dp"
                     app:icon="@drawable/ic_baseline_article"
                     app:layout_constraintEnd_toEndOf="@+id/btn_start_detection"
                     app:layout_constraintStart_toStartOf="@+id/btn_start_detection"
                     app:layout_constraintTop_toBottomOf="@+id/btn_start_detection" />
 
                 <Button
-                    style="@style/ButtonMainMenu"
-                    app:cornerRadius="18dp"
                     android:id="@+id/btn_information_bronchitis"
+                    style="@style/ButtonMainMenu"
                     android:text="@string/informasi_bronchitis"
+                    app:cornerRadius="18dp"
                     app:icon="@drawable/ic_baseline_article"
                     app:layout_constraintEnd_toEndOf="@+id/btn_information_tbc"
                     app:layout_constraintStart_toStartOf="@+id/btn_information_tbc"

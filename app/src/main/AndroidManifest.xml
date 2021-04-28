@@ -9,10 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApplicationDiagnosis">
-        <activity android:name=".activity.SplashActivity"></activity>
-        <activity android:name=".activity.PpokInfoActivity" />
-        <activity android:name=".activity.BronchitisInfoActivity" />
-        <activity android:name=".activity.TbcInfoActivity" />
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.info.PpokInfoActivity" />
+        <activity android:name=".activity.info.BronchitisInfoActivity" />
+        <activity android:name=".activity.info.TbcInfoActivity" />
         <activity android:name=".activity.questions.EightSecQuestion" />
         <activity android:name=".activity.questions.SevenSecQuestion" />
         <activity android:name=".activity.questions.SixSecQuestion" />
@@ -22,13 +28,7 @@
         <activity android:name=".activity.questions.ResultDiagnosis" />
         <activity android:name=".activity.questions.SecondSecQuestion" />
         <activity android:name=".activity.questions.FirstSecQuestion" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activity.MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
