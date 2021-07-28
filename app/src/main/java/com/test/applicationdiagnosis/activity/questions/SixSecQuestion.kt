@@ -70,7 +70,7 @@ class SixSecQuestion : AppCompatActivity(), View.OnClickListener {
                         if (q10YesChecked && q11YesChecked) {
                             setResult = "pass_check6"
                             setTotalQuestion += "1011"
-                            totalTrue = totalTrue + 2
+                            totalTrue += 2
                             val moveWithDataIntent = Intent(this@SixSecQuestion, ResultDiagnosis::class.java)
                             moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_SIX, totalTrue)
                             moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
@@ -88,7 +88,7 @@ class SixSecQuestion : AppCompatActivity(), View.OnClickListener {
                         } else if (!q10YesChecked && q11YesChecked) {
                             setResult = "pass_check6"
                             setTotalQuestion += "11"
-                            totalTrue = totalTrue + 1
+                            totalTrue += 1
                             val moveWithDataIntent = Intent(this@SixSecQuestion, ResultDiagnosis::class.java)
                             moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_SIX, totalTrue)
                             moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)

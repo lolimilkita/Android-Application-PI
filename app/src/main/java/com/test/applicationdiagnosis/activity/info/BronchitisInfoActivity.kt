@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
+import com.test.applicationdiagnosis.R
 import com.test.applicationdiagnosis.`object`.DataInfoBronchitis
+import com.test.applicationdiagnosis.activity.AboutAppActivity
 import com.test.applicationdiagnosis.activity.MainActivity
 import com.test.applicationdiagnosis.adapter.AdapterInfoBronchitis
 import com.test.applicationdiagnosis.data.InfoBronchitis
@@ -21,6 +23,7 @@ class BronchitisInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingBronchitisInfoBinding = ActivityBronchitisInfoBinding.inflate(layoutInflater)
         setContentView(bindingBronchitisInfoBinding.root)
+        supportActionBar?.hide()
 
         list.addAll(DataInfoBronchitis.listInfoBronchitis)
 
@@ -29,6 +32,20 @@ class BronchitisInfoActivity : AppCompatActivity() {
 
         bindingBronchitisInfoBinding.btnBackHome.setOnClickListener {
             val moveIntent = Intent(this@BronchitisInfoActivity, MainActivity::class.java)
+            moveIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(moveIntent)
+            finish()
+        }
+
+        bindingBronchitisInfoBinding.btnBack.setOnClickListener {
+            val moveIntent = Intent(this@BronchitisInfoActivity, MainActivity::class.java)
+            moveIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(moveIntent)
+            finish()
+        }
+
+        bindingBronchitisInfoBinding.btnDeviceInfo.setOnClickListener {
+            val moveIntent = Intent(this@BronchitisInfoActivity, AboutAppActivity::class.java)
             moveIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(moveIntent)
             finish()

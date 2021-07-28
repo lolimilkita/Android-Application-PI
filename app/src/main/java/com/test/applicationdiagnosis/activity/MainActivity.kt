@@ -2,11 +2,10 @@ package com.test.applicationdiagnosis.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
-import com.test.applicationdiagnosis.R
 import com.test.applicationdiagnosis.`object`.SlideData
 import com.test.applicationdiagnosis.activity.*
 import com.test.applicationdiagnosis.activity.info.BronchitisInfoActivity
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingActivityMainBinding.root)
-        supportActionBar?.title = getString(R.string.acbar_main)
+        supportActionBar?.hide()
 
         list.addAll(SlideData.listData)
 
@@ -50,6 +49,11 @@ class MainActivity : AppCompatActivity() {
 
         bindingActivityMainBinding.btnInformationPpok.setOnClickListener {
             val moveIntent = Intent(this@MainActivity, PpokInfoActivity::class.java)
+            startActivity(moveIntent)
+        }
+
+        bindingActivityMainBinding.btnDeviceInfo.setOnClickListener {
+            val moveIntent = Intent(this@MainActivity, AboutAppActivity::class.java)
             startActivity(moveIntent)
         }
     }

@@ -1,7 +1,6 @@
 package com.test.applicationdiagnosis.`object`
 
 import com.test.applicationdiagnosis.data.InfoPpok
-import com.test.applicationdiagnosis.data.InfoTbc
 
 object DataInfoPpok {
     private val infoNames = arrayOf("info1", "info2", "info3", "info4", "info5", "info6", "info7", "info8", "info9", "info10", "info11", "info12", "info13", "info14", "info15", "info16", "info17", "info18", "info19", "info20", "info21", "info22", "info23", "info24", "info25")
@@ -45,12 +44,12 @@ object DataInfoPpok {
             "Operasi",
             "Operasi dilakukan pada pasien yang gejalanya tidak dapat diredakan dengan obat-obatan atau terapi.",
             "Selain penanganan di atas, ada beberapa langkah yang harus dilakukan oleh pasien untuk memperlambat kerusakan pada paru-paru, yaitu",
-            "1. Menghentikan kebiasaan merokok dan menghindari paparan asap rokok\n" +
-                    "2. Menghindari polusi udara, seperti asap kendaraan atau pembakaran\n" +
+            "1. Menghentikan kebiasaan merokok dan menghindari paparan asap rokok.\n" +
+                    "2. Menghindari polusi udara, seperti asap kendaraan atau pembakaran.\n" +
                     "3. Menggunakan pelembap udara ruangan (air humidifier)\n" +
-                    "4. Menjaga pola makan yang sehat, banyak minum, dan berolahraga secara rutin\n" +
-                    "5. Menjalani vaksinasi secara rutin, seperti vaksin flu dan pneumokokus\n" +
-                    "6. Memeriksakan diri ke dokter secara berkala agar kondisi kesehatan terpantau"
+                    "4. Menjaga pola makan yang sehat, banyak minum, dan berolahraga secara rutin.\n" +
+                    "5. Menjalani vaksinasi secara rutin, seperti vaksin flu dan pneumokokus.\n" +
+                    "6. Memeriksakan diri ke dokter secara berkala agar kondisi kesehatan terpantau."
     )
 
     val listInfoPpok: ArrayList<InfoPpok>

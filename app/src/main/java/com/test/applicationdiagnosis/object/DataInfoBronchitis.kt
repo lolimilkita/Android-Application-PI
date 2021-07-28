@@ -1,7 +1,6 @@
 package com.test.applicationdiagnosis.`object`
 
 import com.test.applicationdiagnosis.data.InfoBronchitis
-import com.test.applicationdiagnosis.data.InfoTbc
 
 object DataInfoBronchitis {
     private val infoNames = arrayOf("info1", "info2", "info3", "info4", "info5", "info6", "info7", "info8", "info9", "info10", "info11", "info12", "info13", "info14", "info15")

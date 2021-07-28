@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:layout_width="300dp"
+    android:layout_height="280dp"
     android:layout_marginStart="16dp"
     android:layout_marginTop="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginBottom="16dp"
     android:padding="8dp"
-    app:cardBackgroundColor="#74FFFFFF"
+    app:cardBackgroundColor="@color/cornflower"
     app:cardCornerRadius="20dp"
     app:cardElevation="2dp">
 
@@ -18,6 +18,7 @@
         android:layout_height="match_parent"
         android:fontFamily="@font/poppins"
         android:padding="16dp"
+        android:background="@color/cornflower"
         android:text="@string/dummy_info"
         android:textColor="@android:color/black"
         android:textSize="14sp" />

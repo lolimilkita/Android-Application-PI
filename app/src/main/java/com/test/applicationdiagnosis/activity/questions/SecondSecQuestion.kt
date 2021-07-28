@@ -1,13 +1,12 @@
 package com.test.applicationdiagnosis.activity.questions
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.RadioButton
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.test.applicationdiagnosis.R
 
 class SecondSecQuestion : AppCompatActivity(), View.OnClickListener {
@@ -85,14 +84,22 @@ class SecondSecQuestion : AppCompatActivity(), View.OnClickListener {
                             finish()
                         } else if (q4YesCheck && !q5YesCheck){
                             setResult = "false_diagnosis2"
-                            setTotalQuestion = "4"
+                            setTotalQuestion = "1234"
                             val moveWithDataIntent = Intent(this@SecondSecQuestion, ResultDiagnosis::class.java)
                             moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
                             moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
                             startActivity(moveWithDataIntent)
                             finish()
                         } else if (!q4YesCheck && !q5YesCheck) {
-                            setResult = "false_diagnosis"
+                            setResult = "false_diagnosis2"
+                            setTotalQuestion = "123"
+                            val moveWithDataIntent = Intent(this@SecondSecQuestion, ResultDiagnosis::class.java)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)
+                            moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_TOTAL_QUESTION, setTotalQuestion)
+                            startActivity(moveWithDataIntent)
+                            finish()
+                        } else if (!q4YesCheck) {
+                            setResult = "false_diagnosis2"
                             setTotalQuestion = "123"
                             val moveWithDataIntent = Intent(this@SecondSecQuestion, ResultDiagnosis::class.java)
                             moveWithDataIntent.putExtra(ResultDiagnosis.EXTRA_RESULT, setResult)

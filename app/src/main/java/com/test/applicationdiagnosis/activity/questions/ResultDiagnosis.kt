@@ -50,9 +50,7 @@ class ResultDiagnosis : AppCompatActivity(), View.OnClickListener {
 
         val tvQuestionSelected: TextView = findViewById(R.id.tv_question_selected)
 
-        val result = intent.getStringExtra(EXTRA_RESULT)
-
-        when (result) {
+        when (intent.getStringExtra(EXTRA_RESULT)) {
             "false_diagnosis" -> {
                 tvDataResult.text = getString(R.string.result_false_diagnosis)
                 val imgView: ImageView = findViewById(R.id.img_people2)
@@ -89,7 +87,7 @@ class ResultDiagnosis : AppCompatActivity(), View.OnClickListener {
                 val imgView: ImageView = findViewById(R.id.img_people2)
                 imgView.setImageResource(R.drawable.ic_positive_vote)
                 when (setTotalQuestion) {
-                    "4" -> {
+                    "1234" -> {
                         tvQuestionSelected.text = "1. ${getString(R.string.symptoms1)} \n" +
                                 "2. ${getString(R.string.symptoms2)} \n" +
                                 "3. ${getString(R.string.symptoms3)} \n" +
@@ -202,6 +200,20 @@ class ResultDiagnosis : AppCompatActivity(), View.OnClickListener {
                                 "6. ${getString(R.string.symptoms6)} \n" +
                                 "7. ${getString(R.string.symptoms7)}"
                     }
+                    "12357" -> {
+                        tvQuestionSelected.text = "1. ${getString(R.string.symptoms1)} \n" +
+                                "2. ${getString(R.string.symptoms2)} \n" +
+                                "3. ${getString(R.string.symptoms3)} \n" +
+                                "4. ${getString(R.string.symptoms5)} \n" +
+                                "5. ${getString(R.string.symptoms7)}"
+                    }
+                    "12358" -> {
+                        tvQuestionSelected.text = "1. ${getString(R.string.symptoms1)} \n" +
+                                "2. ${getString(R.string.symptoms2)} \n" +
+                                "3. ${getString(R.string.symptoms3)} \n" +
+                                "4. ${getString(R.string.symptoms5)} \n" +
+                                "5. ${getString(R.string.symptoms8)}"
+                    }
                 }
                 for (i in 8 downTo 4) {
                     if (totalTrueFromFourSec == i) {
@@ -269,6 +281,21 @@ class ResultDiagnosis : AppCompatActivity(), View.OnClickListener {
                                 "5. ${getString(R.string.symptoms5)} \n" +
                                 "6. ${getString(R.string.symptoms9)} \n" +
                                 "7. ${getString(R.string.symptoms10)}"
+                    }
+                    "123459" -> {
+                        tvQuestionSelected.text = "1. ${getString(R.string.symptoms1)} \n" +
+                                "2. ${getString(R.string.symptoms2)} \n" +
+                                "3. ${getString(R.string.symptoms3)} \n" +
+                                "4. ${getString(R.string.symptoms4)} \n" +
+                                "5. ${getString(R.string.symptoms5)} \n" +
+                                "6. ${getString(R.string.symptoms9)}"
+                    }
+                    "12359" -> {
+                        tvQuestionSelected.text = "1. ${getString(R.string.symptoms1)} \n" +
+                                "2. ${getString(R.string.symptoms2)} \n" +
+                                "3. ${getString(R.string.symptoms3)} \n" +
+                                "4. ${getString(R.string.symptoms5)} \n" +
+                                "5. ${getString(R.string.symptoms9)}"
                     }
                 }
                 for (i in 8 downTo 5) {

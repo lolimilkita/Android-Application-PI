@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">ApplicationDiagnosis</string>
+    <string name="app_name">Aplikasi Diagnosa Penyakit TBC, Bronchitis, &amp; PPOK</string>
     <string name="acbar_main">Aplikasi Diagnosa Penyakit</string>
     <string name="acbar_question">Pilih Gejala</string>
-    <string name="acbar_result">Hasil Diagnosis</string>
+    <string name="acbar_info_bronchitis">Informasi Bronchitis</string>
+    <string name="acbar_info_tbc">Informasi TBC</string>
+    <string name="acbar_info_ppok">Informasi PPOK</string>
+    <string name="acbar_result">Hasil Diagnosa</string>
     <string name="mulai_deteksi">Mulai Diagnosa</string>
     <string name="informasi_tbc">Informasi TBC</string>
     <string name="informasi_bronchitis">Informasi Bronkitis</string>
@@ -54,8 +57,14 @@
     <string name="ic_bad_environment">Ikon Lingkungan Buruk</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="judul_aplikasi"><![CDATA[APLIKASI PENDETEKSI TBC, BRONKITIS & PPOK]]></string>
+    <string name="judul_aplikasi"><![CDATA[APLIKASI DIAGNOSA TBC, BRONKITIS & PPOK]]></string>
 
     <string name="dummy_info">Dummy Info</string>
+
+    <string name="my_name">Catur Saputro</string>
+    <string name="my_email">caturcno.cr@gmail.com</string>
+    <string name="my_github">github.com/lolimilkita</string>
+    <string name="text_about">Aplikasi ini dibuat oleh</string>
+    <string name="text_about_app">Aplikasi Diagnosa Penyakit TBC, Bronchitis, dan PPOK ini bertujuan untuk mendiagnosa penyakit tersebut dan juga terdapat Informasi tentang penyakit</string>
 
 </resources>

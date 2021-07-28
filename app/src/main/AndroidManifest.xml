@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApplicationDiagnosis">
+        <activity android:name=".activity.AboutAppActivity"></activity>
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +29,7 @@
         <activity android:name=".activity.questions.ResultDiagnosis" />
         <activity android:name=".activity.questions.SecondSecQuestion" />
         <activity android:name=".activity.questions.FirstSecQuestion" />
-        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

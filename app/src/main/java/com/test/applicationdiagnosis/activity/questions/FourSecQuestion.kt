@@ -29,6 +29,7 @@ class FourSecQuestion : AppCompatActivity(), View.OnClickListener {
 
         totalTrue = intent.getIntExtra(EXTRA_TOTAL, 0)
         setTotalQuestion = intent.getStringExtra(ThirdSecQuestion.EXTRA_TOTAL_QUESTION).toString()
+        setTotalQuestion = intent.getStringExtra(SevenSecQuestion.EXTRA_TOTAL_QUESTION).toString()
 
         val btnNextSec: Button = findViewById(R.id.btn_next_sec4)
         btnNextSec.setOnClickListener(this)

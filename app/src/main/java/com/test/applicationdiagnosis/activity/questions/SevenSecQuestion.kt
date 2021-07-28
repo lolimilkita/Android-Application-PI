@@ -1,13 +1,12 @@
 package com.test.applicationdiagnosis.activity.questions
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.RadioButton
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.test.applicationdiagnosis.R
 
 class SevenSecQuestion : AppCompatActivity(), View.OnClickListener {

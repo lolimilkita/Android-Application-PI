@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
+import com.test.applicationdiagnosis.R
 import com.test.applicationdiagnosis.`object`.DataInfoTbc
+import com.test.applicationdiagnosis.activity.AboutAppActivity
 import com.test.applicationdiagnosis.activity.MainActivity
 import com.test.applicationdiagnosis.data.InfoTbc
 import com.test.applicationdiagnosis.adapter.AdapterInfoTbc
@@ -21,6 +23,7 @@ class TbcInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingTbcInfoBinding = ActivityTbcInfoBinding.inflate(layoutInflater)
         setContentView(bindingTbcInfoBinding.root)
+        supportActionBar?.hide()
 
         list.addAll(DataInfoTbc.listInfoTbc)
 
@@ -29,6 +32,20 @@ class TbcInfoActivity : AppCompatActivity() {
 
         bindingTbcInfoBinding.btnBackHome.setOnClickListener {
             val moveIntent = Intent(this@TbcInfoActivity, MainActivity::class.java)
+            moveIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(moveIntent)
+            finish()
+        }
+
+        bindingTbcInfoBinding.btnBack.setOnClickListener {
+            val moveIntent = Intent(this@TbcInfoActivity, MainActivity::class.java)
+            moveIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(moveIntent)
+            finish()
+        }
+
+        bindingTbcInfoBinding.btnDeviceInfo.setOnClickListener {
+            val moveIntent = Intent(this@TbcInfoActivity, AboutAppActivity::class.java)
             moveIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(moveIntent)
             finish()
