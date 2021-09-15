@@ -200,6 +200,14 @@ class ResultDiagnosis : AppCompatActivity(), View.OnClickListener {
                                 "6. ${getString(R.string.symptoms6)} \n" +
                                 "7. ${getString(R.string.symptoms7)}"
                     }
+                    "123578" -> {
+                        tvQuestionSelected.text = "1. ${getString(R.string.symptoms1)} \n" +
+                                "2. ${getString(R.string.symptoms2)} \n" +
+                                "3. ${getString(R.string.symptoms3)} \n" +
+                                "4. ${getString(R.string.symptoms5)} \n" +
+                                "5. ${getString(R.string.symptoms7)} \n" +
+                                "6. ${getString(R.string.symptoms8)}"
+                    }
                     "12357" -> {
                         tvQuestionSelected.text = "1. ${getString(R.string.symptoms1)} \n" +
                                 "2. ${getString(R.string.symptoms2)} \n" +
